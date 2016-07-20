@@ -11,22 +11,22 @@ use app\models\ContactForm;
 
 class V1Controller extends Controller
 {
-    public function actionView()
+    public function actionView($model)
     {
-        return 'view';
+        return 'view '.$model;
     }
 
-    public function actionCreate()
+    public function actionCreate($model)
     {
         return 'create';
     }
 
-    public function actionDelete()
+    public function actionDelete($model,$id)
     {
         return 'delete';
     }
 
-    public function actionUpdate()
+    public function actionUpdate($model,$id)
     {
         return 'Update';
     }

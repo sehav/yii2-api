@@ -42,7 +42,10 @@ $config = [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
-                
+                'v1/<model:\w+>' => 'v1/view',
+                'POST v1/<model:\w+>' => 'v1/create',
+                'POST v1/<model:\w+>/<id:\d+>' => 'v1/update',
+                'DELETE v1/<model:\w+>/<id:\d+>' => 'v1/delete',
             ],
         ],
     ],
