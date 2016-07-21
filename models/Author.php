@@ -52,7 +52,7 @@ class Author extends \yii\db\ActiveRecord
         \Yii::$app
             ->db
             ->createCommand()
-            ->delete('authors_books', ['book_id' => $this->id])
+            ->delete('authors_books', ['author_id' => $this->id])
             ->execute();
         return true;
     }
