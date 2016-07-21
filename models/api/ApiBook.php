@@ -7,5 +7,5 @@ use Yii;
 
 class ApiBook extends Book
 {
-    
+    public static $relations=['authors'];
 }

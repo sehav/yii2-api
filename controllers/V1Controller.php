@@ -14,7 +14,13 @@ class V1Controller extends Controller
 {
     public function actionView($model)
     {
-        return 'view '.$model;
+        \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+        $modelName='app\models\api\Api'.ucfirst(strtolower($model));
+        if(class_exists($modelName)){
+            $models=$modelName::find()->with($modelName::$relations)->asArray()->all();
+            return $models;
+        }
+        return false;
     }
 
     public function actionCreate($model)
@@ -65,6 +71,16 @@ class V1Controller extends Controller
 
     public function actionUpdate($model,$id)
     {
-        return 'Update';
+        Yii::$app->controller->enableCsrfValidation = false;
+        \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+        $modelName='app\models\api\Api'.ucfirst(strtolower($model));
+        if(class_exists($modelName)){
+            $model=$modelName::findOne($id);
+            if($model->load($_POST)){
+                $model->save();
+                return $model;
+            }
+        }
+        return false;
     }
 }

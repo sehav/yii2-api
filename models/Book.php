@@ -27,8 +27,8 @@ class Book extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['title', 'cover'], 'required'],
-            [['title', 'cover'], 'string', 'max' => 255],
+            [['title', 'coverUrl'], 'required'],
+            [['title', 'coverUrl'], 'string', 'max' => 255],
         ];
     }
 
@@ -40,7 +40,7 @@ class Book extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'title' => 'Title',
-            'isbn' => 'Isbn',
+            'coverUrl' => 'cover',
         ];
     }
 

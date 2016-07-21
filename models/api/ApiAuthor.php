@@ -13,5 +13,5 @@ use Yii;
  */
 class ApiAuthor extends Author
 {
-    
+    public static $relations=['books'];
 }

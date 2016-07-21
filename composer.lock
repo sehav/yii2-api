@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "479407875c975e7dbee0aefcb85e62d5",
-    "content-hash": "5c27dd23827e5c153817a7f3f5d227c6",
+    "hash": "45e9c64f25140c8622245f17aed34b62",
+    "content-hash": "3efdc4b3f7a5ea1305f5ac60060ea7bb",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -669,6 +669,52 @@
                 "fixtures"
             ],
             "time": "2016-04-29 12:21:54"
+        },
+        {
+            "name": "jamband/yii2-schemadump",
+            "version": "v0.9.9",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jamband/yii2-schemadump.git",
+                "reference": "a156f2a67cc1a47e46605f4d8d5228826c22d36d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jamband/yii2-schemadump/zipball/a156f2a67cc1a47e46605f4d8d5228826c22d36d",
+                "reference": "a156f2a67cc1a47e46605f4d8d5228826c22d36d",
+                "shasum": ""
+            },
+            "require": {
+                "yiisoft/yii2": "^2.0"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "jamband\\schemadump\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Tomoki Morita",
+                    "email": "tmsongbooks215@gmail.com",
+                    "homepage": "http://jamband.github.io/"
+                }
+            ],
+            "description": "Generate the schema from an existing database",
+            "homepage": "https://github.com/jamband/yii2-schemadump",
+            "keywords": [
+                "command",
+                "database",
+                "extension",
+                "generator",
+                "migration",
+                "yii2"
+            ],
+            "time": "2015-12-17 09:39:40"
         },
         {
             "name": "phpspec/php-diff",
